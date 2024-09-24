@@ -2,12 +2,14 @@ package com.slgames.store.dtos.enterprise;
 
 import java.time.LocalDate;
 
+import com.slgames.store.dtos.DTO;
+
 import jakarta.validation.constraints.NotNull;
 
 public record UpdateEnterpriseDTO(
 		@NotNull Long id,
 		String name, 
-		LocalDate foundationDate) {
+		LocalDate foundationDate) implements DTO {
 	
 	@Override
 	public final String toString() {

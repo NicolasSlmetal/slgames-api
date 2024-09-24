@@ -1,5 +1,7 @@
 package com.slgames.store.dtos.users;
 
+import com.slgames.store.dtos.DTO;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
@@ -12,7 +14,7 @@ public record InsertUserDTO
 		String password,
 		
 		@NotBlank
-		String role) {
+		String role) implements DTO {
 
 	
 	@Override

@@ -3,6 +3,7 @@ package com.slgames.store.dtos.game;
 import java.time.LocalDate;
 import java.util.Set;
 
+import com.slgames.store.dtos.DTO;
 import com.slgames.store.dtos.genre.GenreDTO;
 
 import jakarta.validation.constraints.NotBlank;
@@ -16,7 +17,7 @@ public record InsertGameDTO(
 		@NotNull Long developer, 
 		@NotNull Long publisher,
 		@NotNull Set<GenreDTO> genres
-		) {
+		) implements DTO{
 
 	
 	@Override
